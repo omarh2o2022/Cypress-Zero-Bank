@@ -82,9 +82,13 @@ describe (' Zero Bank', () => {
 
         // transaction
         cy.get('#sp_amount').type('49.99')
-        cy.get('#sp_date')
+        //Calendar Date
+        cy.get('#sp_date').click()
+        cy.contains('.ui-state-default', '15').click()
+        
         cy.get('#sp_description').type('this is a description of a transaction')
         cy.get('#pay_saved_payees').click()
+        cy.get('#alert_content > span').should('contain.text', 'The payment was successfully submitted.')
 
     })
     
