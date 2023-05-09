@@ -61,7 +61,7 @@ describe (' Zero Bank', () => {
 
     })
     
-    it.only('Pay Bills', ()=>{
+    it('Pay Bills', ()=>{
         // Pay Saved payees
         cy.get('#pay_bills_tab > a').click()
         cy.get('.board-header').should('contain.text', 'Make payments to your saved payees')
