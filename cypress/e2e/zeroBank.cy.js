@@ -94,7 +94,7 @@ describe (' Zero Bank', () => {
 
     })
 
-    it.only('My Money Map', ()=>{
+    it('My Money Map', ()=>{
         cy.get('#money_map_tab > a').click()
         cy.get('#report-1010_header_hd-textEl').should('contain.text', 'Inflow')
         cy.get('#gridview-1015-hd-Deposits > .x-grid-cell > .x-grid-cell-inner > .x-grid-group-title').should('contain.text', 'Subject: Deposits')
