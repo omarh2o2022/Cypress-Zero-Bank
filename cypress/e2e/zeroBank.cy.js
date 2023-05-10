@@ -1,5 +1,7 @@
 /// <reference types = "cypress"/>  
 
+const { contains } = require("cypress/types/jquery")
+
 describe (' Zero Bank', () => {
     beforeEach(() => {
 
@@ -91,5 +93,27 @@ describe (' Zero Bank', () => {
         cy.get('#alert_content > span').should('contain.text', 'The payment was successfully submitted.')
 
     })
+
+    it.only('My Money Map', ()=>{
+        cy.get('#money_map_tab > a').click()
+        cy.get('#report-1010_header_hd-textEl').should('contain.text', 'Inflow')
+        cy.get('#gridview-1015-hd-Deposits > .x-grid-cell > .x-grid-cell-inner > .x-grid-group-title').should('contain.text', 'Subject: Deposits')
+        cy.get('#report-1016_header_hd-textEl').should('contain.text', 'OutFlow')
+        cy.get('#gridview-1021-hd-Spendings > .x-grid-cell > .x-grid-cell-inner > .x-grid-group-title').should('contain.text', 'Subject: Spendings')
+        cy.get('#report-1022_header_hd-textEl').should('contain.text', 'Payments to Zero banc credit cards')
+
+        cy.get('#ext-sprite-8798 > tspan').click()
+        cy.get('#ext-sprite-8802 > tspan').click()
+        cy.get('#ext-sprite-9287 > tspan').click()
+        cy.get('#ext-sprite-9682 > tspan').click()
+        cy.get('#ext-sprite-10067 > tspan').click()
+        cy.get('#ext-sprite-10543 > tspan').click()
+        cy.get('#ext-sprite-11018 > tspan').click()
+        cy.get('#ext-sprite-11323 > tspan').click()
+        cy.get('#ext-sprite-11668 > tspan').click()
+        cy.get('#ext-sprite-11983 > tspan').click()
+
+    
+    })  
     
 })
