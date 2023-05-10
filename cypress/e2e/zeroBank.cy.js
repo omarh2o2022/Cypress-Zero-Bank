@@ -1,6 +1,6 @@
 /// <reference types = "cypress"/>  
 
-const { contains } = require("cypress/types/jquery")
+
 
 describe (' Zero Bank', () => {
     beforeEach(() => {
@@ -100,20 +100,20 @@ describe (' Zero Bank', () => {
         cy.get('#gridview-1015-hd-Deposits > .x-grid-cell > .x-grid-cell-inner > .x-grid-group-title').should('contain.text', 'Subject: Deposits')
         cy.get('#report-1016_header_hd-textEl').should('contain.text', 'OutFlow')
         cy.get('#gridview-1021-hd-Spendings > .x-grid-cell > .x-grid-cell-inner > .x-grid-group-title').should('contain.text', 'Subject: Spendings')
-        cy.get('#report-1022_header_hd-textEl').should('contain.text', 'Payments to Zero banc credit cards')
-
-        cy.get('#ext-sprite-8798 > tspan').click()
-        cy.get('#ext-sprite-8802 > tspan').click()
-        cy.get('#ext-sprite-9287 > tspan').click()
-        cy.get('#ext-sprite-9682 > tspan').click()
-        cy.get('#ext-sprite-10067 > tspan').click()
-        cy.get('#ext-sprite-10543 > tspan').click()
-        cy.get('#ext-sprite-11018 > tspan').click()
-        cy.get('#ext-sprite-11323 > tspan').click()
-        cy.get('#ext-sprite-11668 > tspan').click()
-        cy.get('#ext-sprite-11983 > tspan').click()
-
-    
+        cy.get('#report-1022_header_hd-textEl').should('contain.text', 'Payments to Zero bank credit cards')
+        
+        cy.contains('OutFlow Chart')        
+        cy.get('#ext-sprite-1257').click()
+        cy.get('#ext-sprite-1259').click()
+        cy.get('#ext-sprite-1273').click()   
+        cy.get('#ext-sprite-1272').click()
+        cy.get('#ext-sprite-1271').click()  
+        cy.get('#ext-sprite-1280').click() 
+        cy.get('#ext-sprite-1279').click() 
+        cy.get('#ext-sprite-1278').click() 
+        cy.get('#ext-sprite-1277').click() 
+        cy.get('#ext-sprite-1276').click()   
+           
     })  
     
 })
